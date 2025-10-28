@@ -3,8 +3,6 @@ import uuid
 import time
 from typing import List, Dict, Any
 from dotenv import load_dotenv
-
-# wikipediaapi removed - using MCP server integration instead
 from functools import lru_cache
 from agents import Agent, function_tool, handoff, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
 import asyncio
