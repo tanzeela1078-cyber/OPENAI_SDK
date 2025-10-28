@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 main.py — Clinical Trial Management Orchestrator (2025)
-Coordinates 4 specialized agents using the OpenAI Agents SDK and Trial MCP Server.
-Integrates with TRIAL_MCP_SERVER.py using JSON-RPC format.
+Coordinates 4 specialized agents using the OpenAI Agents SDK and MCP Server.
+Integrates with mcp_server.py using JSON-RPC format.
 """
 
 import os
@@ -22,7 +22,7 @@ from agents.mcp.server import MCPServerStdio
 # ──────────────────────────────────────────────────────────────
 load_dotenv()
 HERE = os.path.dirname(os.path.abspath(__file__))
-MCP_SERVER_SCRIPT = os.path.join(HERE, "TRIAL_MCP_SERVER.py")
+MCP_SERVER_SCRIPT = os.path.join(HERE, "mcp_server.py")
 PYTHON_EXEC = sys.executable
 CLIENT_TIMEOUT = 120.0  # Increased from 30 to 120 seconds
 
@@ -491,4 +491,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
